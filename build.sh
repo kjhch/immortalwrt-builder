@@ -1,6 +1,4 @@
 #!/bin/bash
-set -euo pipefail
-
 PACKAGES="bash \
 vim \
 openssh-sftp-server \
