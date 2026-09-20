@@ -1,5 +1,7 @@
 #!/bin/bash
-PACKAGES = "bash \
+set -euo pipefail
+
+PACKAGES="bash \
 vim \
 openssh-sftp-server \
 tcpdump \
@@ -17,4 +19,4 @@ luci-i18n-passwall-zh-cn \
 luci-i18n-natmap-zh-cn
 "
 
-make image PACKAGES="$PACKAGES" ROOTFS_PARTSIZE=$ROOTFS_SIZE
+make image PACKAGES="$PACKAGES" ROOTFS_PARTSIZE="$ROOTFS_SIZE"

@@ -22,6 +22,9 @@ on:
           - '3072'
           - '4096'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -33,7 +36,7 @@ jobs:
       - name: Set executable permissions
         run: chmod +x ${{ github.workspace }}/build.sh
 
-      - name: Build ImmortalWrt-x86-64-efi 25.12.x
+      - name: Build ImmortalWrt-x86-64-efi
         run: |
           docker run --rm -i \
             --user root \
